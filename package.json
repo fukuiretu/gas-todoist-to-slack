@@ -5,7 +5,10 @@
   "repository": "https://github.com/fukuiretu/gas-todoist-to-slack",
   "author": "fukuiretu <fukuiretu@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@slack/client": "^4.8.0"
+  "dependencies": {},
+  "devDependencies": {
+    "@google/clasp": "^1.7.0",
+    "@types/google-apps-script": "^0.0.33",
+    "tslint": "^5.11.0"
   }
 }
