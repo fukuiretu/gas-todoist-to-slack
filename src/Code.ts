@@ -80,6 +80,9 @@ class SlackWebhooker {
 function main(): void {
   const todayTasks = TodoistFetcher.todayTasks(TODOIST_PROJECT_ID);
   const taskNames = todayTasks.map(item => `- ${item.content}`);
+  if (!taskNames || taskNames.length === 0) {
+    return;
+  }
 
   const msg = MSG_TEMPLATE.replace(/%{tasks}/g, taskNames.join("\n"));
   SlackWebhooker.send(msg);
